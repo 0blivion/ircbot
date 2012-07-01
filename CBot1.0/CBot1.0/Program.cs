@@ -116,5 +116,9 @@ namespace irc
                 return null;
             }
         }
+        public string pong()
+        {
+            return client.read().Split(new char[':'])[1].Split(new char[' '], 2)[1];
+        }
     }
 }
